@@ -1,0 +1,39 @@
+--- PAGE 1 ---
+TRIJYA CHOUBEY
+8529224260 ⋄ DELHI
+choubeytrijya@gmail.com ⋄ linkedin.com/in/trijya ⋄ github.com/trijya
+OBJECTIVE
+Motivated and enthusiastic second-year computer science student with a strong passion for Data Structures, Algo-
+rithms, and Software Engineering. Seeking opportunities to apply problem-solving skills and build real-world software
+solutions while continuously learning and growing in the field of technology.
+EDUCA TION
+Bachelor of T echnology, Banasthali Vidyapeeth 2024-2028
+Relevant Coursework: Electronics and Communication Engineering( 2nd Y ear) Cgpa:7.86
+SKILLS
+Programming Languages C, C++, Java, JavaScript
+W eb Development HTML, CSS, Bootstrap, Frontend Development, Node.js, MongoDB
+T echnical Skills Data Structures and Algorithms, OOPs, STL, GitHub
+Competitive Programming Codeforces: Profile (100+ problems solved)
+EXPERIENCE
+Open Source Contributor – GirlScript Summer of Code (GSSoC) Sept 2024 - Present
+• Contributed to open-source projects under GSSoC, an initiative promoting diversity and women in technology.
+• Worked on real-world codebases by fixing bugs, enhancing features, and collaborating with 20+ contributors
+across global GitHub teams.
+Hackathon Participant – GenIgnite & Hack With Rajasthan 2025
+• Participated in the GenIgnite Hackathon hosted at Microsoft Office (8-hour duration) and secured a position
+in the T op 10 teams.
+• Achieved T op 3 position in Hack With Rajasthan , a 24-hour offline hackathon, demonstrating strong
+problem-solving, teamwork, and rapid prototyping skills.
+PROJECTS
+Image OSINT Intelligence T ool Developed a digital forensics prototype to verify image authenticity using reverse
+image search, metadata & GPS extraction, AI/deepfake detection, and manipulation analysis. Built with Python
+and Gradio. Demo Video
+Mentis Full-stack mental wellness platform with AI chatbot, public chatbox, and story-sharing features using Node.js,
+Express.js, MongoDB, and Bootstrap. Live Demo
+Spacecraft Object Detection using YOLO Trained a YOLO-based object detection model for 100 epochs to
+identify essential spacecraft tools for astronauts, enabling accurate real-time detection.
+EEG Analysis Console React-based AI/ML web application for EEG signal visualization and epilepsy risk predic-
+tion with live graphs and prediction scoring. Live Demo
+EXTRA-CURRICULAR ACTIVITIES
+– Active member of the Yoga and Aerobics clubs, promoting physical wellness and mindfulness.
+– Participated in the Drama Club to enhance creativity, expression, and stage confidence.

@@ -579,6 +579,15 @@ header.scrolled {
   color: var(--accent-primary);
 }
 
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 50%;
+}
+
+
 @keyframes float {
   0% { transform: translateY(0px) rotate(0deg); }
   100% { transform: translateY(-20px) rotate(10deg); }

@@ -254,7 +254,7 @@ function initTypingEffect() {
   if (!typingTextSpan) return;
 
   const roles = [
-    "Computer Science Student",
+    "Software Developer",
     "Full Stack Developer",
     "Competitive Programmer",
     "Open Source Contributor"
@@ -528,35 +528,58 @@ function initContactForm() {
 
     if (isFormValid) {
       const submitBtn = form.querySelector(".btn-primary");
-      const originalText = submitBtn.textContent;
+      const originalText = submitBtn.innerHTML;
       
       // Visual feedback states
-      submitBtn.textContent = "Sending Messages...";
+      submitBtn.textContent = "Sending Message...";
       submitBtn.disabled = true;
 
-      // Mock remote network interaction
-      setTimeout(() => {
-        // Show premium bottom-right alert popup
-        if (popup) {
-          popupText.textContent = "Success! Message has been routed.";
-          popup.classList.add("active");
+      const formData = new FormData(form);
+      
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          // Show premium bottom-right alert popup
+          if (popup) {
+            popupText.textContent = "Success! Message has been routed.";
+            popup.classList.add("active");
+            
+            setTimeout(() => {
+              popup.classList.remove("active");
+            }, 4000);
+          }
+          form.reset();
           
-          setTimeout(() => {
-            popup.classList.remove("active");
-          }, 4000);
+          // Reset floating label inputs
+          inputs.forEach((input) => {
+            const statusSpan = input.nextElementSibling.nextElementSibling;
+            if (statusSpan) statusSpan.textContent = "";
+          });
+        } else {
+          console.log(response);
+          if (popup) {
+            popupText.textContent = json.message || "Error submitting form.";
+            popup.classList.add("active");
+            setTimeout(() => popup.classList.remove("active"), 4000);
+          }
         }
-
-        form.reset();
-        
-        // Reset floating label inputs
-        inputs.forEach((input) => {
-          const statusSpan = input.nextElementSibling.nextElementSibling;
-          if (statusSpan) statusSpan.textContent = "";
-        });
-
-        submitBtn.textContent = originalText;
+      })
+      .catch((error) => {
+        console.log(error);
+        if (popup) {
+          popupText.textContent = "Something went wrong!";
+          popup.classList.add("active");
+          setTimeout(() => popup.classList.remove("active"), 4000);
+        }
+      })
+      .then(() => {
+        submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-      }, 1500);
+      });
     }
   });
 }
